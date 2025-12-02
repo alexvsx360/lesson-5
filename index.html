@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מפעיל סיסמאות</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="container">
+    <header>
+        <h1>🔒 מפעיל סיסמאות אקראיות</h1>
+    </header>
+
+    <section class="output-area">
+        <input type="text" id="password-output" readonly value="לחץ/י על 'יצירת סיסמה'">
+    </section>
+
+    <section class="controls">
+        <h2>אפשרויות הסיסמה</h2>
+
+        <div class="control-group">
+            <label for="length-range">אורך הסיסמה (<span id="length-display">12</span>):</label>
+            <input type="range" id="length-range" min="4" max="32" value="12">
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="include-lower" checked>
+            <label for="include-lower">אותיות קטנות (a-z)</label>
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="include-upper" checked>
+            <label for="include-upper">אותיות גדולות (A-Z)</label>
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="include-numbers" checked>
+            <label for="include-numbers">מספרים (0-9)</label>
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="include-symbols">
+            <label for="include-symbols">סימנים (@#$%!)</label>
+        </div>
+
+        <button id="generate-btn">יצירת סיסמה</button>
+    </section>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>
